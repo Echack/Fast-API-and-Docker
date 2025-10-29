@@ -1,4 +1,4 @@
-# Diabetes Prediction API (FastAPI + Docker)
+# FastAPI and Docker
 
 This project demonstrates how to deploy a trained **Machine Learning model** as a **FastAPI web service**, both locally and in a Docker container.  
 The model predicts diabetes progression values using the **scikit-learn diabetes dataset** and a **RandomForestRegressor**.
