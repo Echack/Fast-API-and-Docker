@@ -162,3 +162,9 @@ Body: {"detail":"Prediction failed: Found array with 0 sample(s) (shape=(0, 10))
 | PowerShell can’t activate venv | Script execution blocked | Run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
 | Dependencies conflict | Version mismatch | Delete `.venv` and reinstall from `requirements.txt` |
 | File path issues on Windows | Using `@example_request.json` in curl | Use PowerShell `Get-Content -Raw .\example_request.json` instead |
+
+## Pictures of Working Locally and with Docker
+
+![Running locally](images/API_running_locally.jpg)
+
+![Running with Docker](images/API_with_Docker.jpg)
