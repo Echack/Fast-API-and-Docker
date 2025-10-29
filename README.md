@@ -11,10 +11,10 @@ The API exposes two endpoints:
 - **POST /predict** — Accepts a JSON body with patient data and returns the model’s predicted diabetes progression.
 
 You can run this project:
-1. **Locally** using Python and a virtual environment.
-2. **Inside Docker** for an isolated, reproducible environment.
+1. Locally using Python and a virtual environment.
+2. Inside Docker for an isolated, reproducible environment.
 
-All testing in this guide uses **PowerShell**.
+All testing in this guide uses PowerShell.
 
 
 ## Steps to Build, Run, and Test
