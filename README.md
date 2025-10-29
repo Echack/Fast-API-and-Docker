@@ -14,8 +14,6 @@ You can run this project:
 1. Locally using Python and a virtual environment.
 2. Inside Docker for an isolated, reproducible environment.
 
-All testing in this guide uses PowerShell.
-
 
 ## Steps to Build, Run, and Test
 
