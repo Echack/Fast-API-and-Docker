@@ -38,17 +38,17 @@ python -m venv .venv
 . .venv\Scripts\Activate.ps1
 ```
 
-#### B Install dependencies
+#### B. Install dependencies
 ```powershell
 pip install -r requirements.txt
 ```
 
-#### C Start the FastAPI app
+#### C. Start the FastAPI app
 ```powershell
 uvicorn app.main:app --reload --port 8000
 ```
 
-#### D Test using PowerShell
+#### D. Test using PowerShell
 ```powershell
 $body = Get-Content -Raw .\example_request.json
 Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/predict" -Body $body -ContentType "application/json"
