@@ -165,6 +165,8 @@ Body: {"detail":"Prediction failed: Found array with 0 sample(s) (shape=(0, 10))
 
 ## Pictures of Working Locally and with Docker
 
+This one is when being run locally:
 ![Running locally](images/API_running_locally.jpg)
 
+This one is being runned with Docker:
 ![Running with Docker](images/API_with_Docker.jpg)
