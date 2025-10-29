@@ -35,23 +35,23 @@ This script:
 
 ### 2. Run the FastAPI app locally
 
-#### 2.1 Create and activate a virtual environment
+#### A. Create and activate a virtual environment
 ```powershell
 python -m venv .venv
 . .venv\Scripts\Activate.ps1
 ```
 
-#### 2.2 Install dependencies
+#### B Install dependencies
 ```powershell
 pip install -r requirements.txt
 ```
 
-#### 2.3 Start the FastAPI app
+#### C Start the FastAPI app
 ```powershell
 uvicorn app.main:app --reload --port 8000
 ```
 
-#### 2.4 Test using PowerShell
+#### D Test using PowerShell
 ```powershell
 $body = Get-Content -Raw .\example_request.json
 Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/predict" -Body $body -ContentType "application/json"
@@ -68,17 +68,17 @@ feature_order : {age, sex, bmi, bp, s1, s2, s3, s4, s5, s6}
 
 ### 3. Run the API inside Docker
 
-#### 3.1 Build the image
+#### A. Build the image
 ```powershell
 docker build -t diabetes-api .
 ```
 
-#### 3.2 Run the container
+#### B. Run the container
 ```powershell
 docker run -d -p 8000:8000 --name diabetes-api diabetes-api
 ```
 
-#### 3.3 Verify container is running
+#### C. Verify container is running
 ```powershell
 docker ps
 ```
@@ -88,7 +88,7 @@ CONTAINER ID   IMAGE          COMMAND               STATUS          PORTS
 xxxxxxx        diabetes-api   "uvicorn app.main…"   Up 10 seconds   0.0.0.0:8000->8000/tcp
 ```
 
-#### 3.4 Test using PowerShell (same as local)
+#### D. Test using PowerShell (same as local)
 ```powershell
 $body = Get-Content -Raw .\example_request.json
 Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/predict" -Body $body -ContentType "application/json"
@@ -167,7 +167,7 @@ Body: {"detail":"Prediction failed: Found array with 0 sample(s) (shape=(0, 10))
 
 | Issue | Cause | Fix |
 |-------|--------|-----|
-| `Model not found at models/diabetes_model.pkl` | You forgot to train first | Run `python train_model.py` |
+| `Model not found at models/diabetes_model.pkl` | forgot to train first | Run `python train_model.py` |
 | `docker: command not found` | Docker not installed or running | Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and start it |
 | Port already in use | Another process on port 8000 | Use a different port: `--port 9000` |
 | PowerShell can’t activate venv | Script execution blocked | Run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
