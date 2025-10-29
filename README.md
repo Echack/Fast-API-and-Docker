@@ -3,7 +3,6 @@
 This project demonstrates how to deploy a trained **Machine Learning model** as a **FastAPI web service**, both locally and in a Docker container.  
 The model predicts diabetes progression values using the **scikit-learn diabetes dataset** and a **RandomForestRegressor**.
 
----
 
 ## Overview
 
@@ -17,7 +16,6 @@ You can run this project:
 
 All testing in this guide uses **PowerShell**.
 
----
 
 ## Steps to Build, Run, and Test
 
@@ -31,7 +29,6 @@ This script:
 - Prints evaluation metrics (R², MAE, RMSE)  
 - Saves the trained model in `models/diabetes_model.pkl`
 
----
 
 ### 2. Run the FastAPI app locally
 
@@ -64,8 +61,6 @@ model_version : 1.0.0
 feature_order : {age, sex, bmi, bp, s1, s2, s3, s4, s5, s6}
 ```
 
----
-
 ### 3. Run the API inside Docker
 
 #### A. Build the image
@@ -95,8 +90,6 @@ Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/predict" -Body $body 
 ```
 
 You should again receive predictions from the containerized API.
-
----
 
 ## Example Request and Responses
 
@@ -128,8 +121,6 @@ You should again receive predictions from the containerized API.
 }
 ```
 
----
-
 ### Failed Prediction Examples
 
 #### 1. Missing Field (Validation Error – 422)
@@ -160,8 +151,6 @@ Body: {"detail":[{"loc":["data",0,"bmi"],"msg":"Field required","type":"missing"
 Status: 400 (BadRequest)
 Body: {"detail":"Prediction failed: Found array with 0 sample(s) (shape=(0, 10))"}
 ```
-
----
 
 ## Troubleshooting
 
